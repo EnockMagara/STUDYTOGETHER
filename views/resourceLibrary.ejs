@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/resources" class="active">Resource Library</a>
+            <a href="/sessions">Study Sessions</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1><%= title %></h1>
+        <form action="/resources/upload" method="POST" enctype="multipart/form-data">
+            <label for="resource">Upload a PDF:</label>
+            <input type="file" id="resource" name="resource" accept=".pdf" required>
+            <button type="submit">Upload</button>
+        </form>
+        <h2>Uploaded Resources</h2>
+        <ul>
+            <% resources.forEach(resource => { %>
+                <li><a href="/uploads/<%= resource.filename %>" download><%= resource.originalname %></a></li>
+            <% }) %>
+        </ul>
+        <% if (messages.success) { %>
+            <div class="alert success"><%= messages.success %></div>
+        <% } %>
+        <% if (messages.error) { %>
+            <div class="alert error"><%= messages.error %></div>
+        <% } %>
+    </main>
+    <footer>
+        <p>© 2024 Study Together. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>

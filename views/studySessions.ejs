@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" class="<%= title === 'Home' ? 'active' : '' %>">Home</a></li>
+                <li><a href="/resources" class="<%= title === 'Resource Library' ? 'active' : '' %>">Resource Library</a></li>
+                <li><a href="/sessions" class="<%= title === 'Study Sessions' ? 'active' : '' %>">Study Sessions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1><%= title %></h1>
+        
+        <!-- Success Message -->
+        <% if (successMessage) { %>
+            <div id="success-message">
+                <p><%= successMessage %></p>
+            </div>
+        <% } %>
+
+        <div class="form-group">
+            <form action="/sessions/create-group" method="POST">
+                <input type="text" id="groupName" name="groupName" placeholder="Group Name" required>
+                <input type="text" id="groupDescription" name="groupDescription" placeholder="Course Name and Topics" required>
+                <button type="submit">Create Group</button>
+            </form>
+        </div>
+        <div class="form-group">
+            <form action="/sessions/join-group" method="POST">
+                <input type="text" id="userName" name="userName" placeholder="Your Name" required>
+                <select id="groupName" name="groupName" required>
+                    <% groups.forEach(group => { %>
+                        <option value="<%= group.name %>"><%= group.name %></option>
+                    <% }) %>
+                </select>
+                <button type="submit">Join Group</button>
+            </form>
+        </div>
+        <div class="groups-section">
+            <h2>Groups</h2>
+            <div class="group-list">
+                <% groups.forEach(group => { %>
+                    <div class="group-card">
+                        <h3><%= group.name %></h3>
+                        <p><%= group.description || "No description available." %></p>
+                        <p>Active members: <%= group.members.length %></p>
+                        <button>Join Group</button>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+        <div class="help-section">
+            <h3>Need Help?</h3>
+            <p><a href="/help">How It Works</a> | <a href="/faq">FAQ</a></p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Study Together. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>

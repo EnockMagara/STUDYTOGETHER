@@ -1,0 +1,186 @@
+/* Background and Color Scheme */
+body {
+    background-color: #f7f3e9; /* Example light beige color */
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+/* Spacing and Padding */
+.main-content {
+    padding: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Buttons and Interaction */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #f4c542; /* Example yellow color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0a731; /* Darker shade for hover effect */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #131008; /* Set nav background */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white; /* Light text */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background-color: #0056b3; /* Hover background */
+    border-radius: 5px;
+    color: #fff;
+}
+
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white; /* Simple indicator */
+}
+
+/* Footer Section */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Form Alignment and Layout */
+.form-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-group input, .form-group select, .form-group button {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Spacing and Padding */
+.container {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.groups-section {
+    margin-top: 40px;
+}
+
+.group-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.group-card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Typography Adjustments */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+input, select, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Button Design */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

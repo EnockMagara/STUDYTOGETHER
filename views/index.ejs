@@ -1,0 +1,32 @@
+<!-- HTML5 doctype -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title> <!-- Use EJS to insert the title -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/resources">Resource Library</a>
+            <a href="/sessions">Study Sessions</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1>Welcome to <%= title %></h1> <!-- Use EJS to insert the title -->
+        <img src="/images/logo.png" alt="Study Together Logo" style="max-width: 100%; height: auto;">
+        <p>Join our community of learners and educators committed to collaborative study and resource sharing.</p>
+        <a href="/resources" class="cta-button">Explore Resources</a>
+    </main>
+    <footer>
+        <p>© 2024 Study Together. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>
